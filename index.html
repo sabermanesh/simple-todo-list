@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO App</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      href="./images/icon-check.svg"
+      as="image"
+      type="image/svg+xml"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="todo">
+      <h1>To Do List</h1>
+      <button id="theme-switcher">
+        <img src="./images/icon-sun.svg" alt="theme changer" />
+      </button>
+    </header>
+    <main>
+      <div class="add todo">
+        <div class="cb-container">
+          <button id="add-btn">+</button>
+        </div>
+        <div class="txt-container">
+          <label for="addt">add</label>
+          <input
+            type="text"
+            class="txt-input"
+            placeholder="Add New Task"
+            spellcheck="true"
+            id="addt"
+          />
+        </div>
+      </div>
+      <ul class="todos">
+        <li class="todo" draggable="true">
+          <div class="cb-container">
+            <input type="checkbox" class="cb-input" name="" id="" />
+            <span class="check"></span>
+          </div>
+          <p class="item"></p>
+          <button class="clear">
+            <img src="./images/icon-cross.svg" alt="delete item" />
+          </button>
+        </li>
+      </ul>
+      <div class="todo state">
+        <p class="corner">
+          <span id="items-left">0</span>
+          remain items
+        </p>
+        <div class="filter">
+          <button id="all">All</button>
+          <button id="active">Active</button>
+          <button id="completed">Completed</button>
+        </div>
+        <div class="corner">
+          <button id="clear-completed">Clear Completed</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>drag and drop to reorder</p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
